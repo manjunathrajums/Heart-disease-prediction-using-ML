@@ -10,6 +10,7 @@ df.info()
 df.isnull().sum()
 df.drop(['loan_id'],axis=1)
 df.nunique()
+#vsdhvfs
 df[' education'].value_counts()
 df[' loan_status'].value_counts()
 from sklearn.preprocessing import LabelEncoder
