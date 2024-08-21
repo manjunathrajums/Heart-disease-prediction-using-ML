@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: beige;
+        }
+        h1{
+            font-size: 20px;
+         color:rgb(0, 0, 0);
+         text-align: center;
+        }
+        
+        
+      h2{
+         font-size: 20px;
+         color:rgb(0, 0, 0);
+         text-align: center;
+       }
+      #clname{
+        border:10px solid black;
+        padding :30px;
+        margin:20px 20px 20px 20px;
+       }
+      #clname2{
+        text-align: center;
+        position:relative;
+        top:20px;
+        left:3px;
+        border:10px solid black;
+
+       }
+       img{
+        position:relative;
+        width:190px;
+        height: 190px;
+        left:40%;
+        border:10px solid black;
+       }
+    </style>
+</head>
+<body>
+    <h1>HEART DISEASE PREDICTION</h1>
+    <h2>Please enter the below details :</h2>
+    <div id="clname">
+    <form action="{{url_for('hello_world')}}"method="post">
+        <p> ENTER YOUR age :  <input type='text'  name ='age' required='required'/></p>
+        <p> ENTER YOUR Sex (Enter 1 for male and 0 for female):  <input type='text' name ='Sex'  required='required'/></p>
+        <p> ENTER THE Chestpaintype (1-4):  <input type='text' name ='Chestpaintype'  required='required'/></p>
+        <p> ENTER BP:  <input type='text' name ='BP' required='required'/></p>
+        <p> ENTER Cholesterol:  <input type='text' name ='Cholesterol' required='required'/></p>
+        <p> ENTER FBSover120:  <input type='text' name ='FBSover120' required='required'/></p>
+        <p> ENTER EKGresults  <input type='text' name ='EKGresults' required='required'/></p>
+        <p> ENTER MaxHR <input type='text' name ='MaxHR' required='required'/></p>
+        <p> ENTER Exerciseangina <input type='text' name ='Exerciseangina' required='required'/></p>
+        <p> ENTER STdepression<input type='text' name ='STdepression' required='required'/></p>
+        <p> ENTER SlopeofST <input type='text' name ='SlopeofST' required='required'/></p>
+        <p> ENTER Numberofvesselsfluro <input type='text' name ='Numberofvesselsfluro' required='required'/></p>
+        <p> ENTER Thallium (value between 0-7) <input type='text' name ='Thallium' required='required'/></p>
+        <button type ='submit'>Predict </button>
+     </form>
+     </div>
+     
+     <div id="clname2">
+    <p>{{results}} </p>
+   
+    </div>
+</body>
+</html>
